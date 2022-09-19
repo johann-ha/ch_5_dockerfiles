@@ -15,3 +15,5 @@ wget --quiet \
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh
 
+RUN apt-get install -y tini && \
+    apt-get clean
