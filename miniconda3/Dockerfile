@@ -17,3 +17,9 @@ wget --quiet \
 
 RUN apt-get install -y tini && \
     apt-get clean
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV PATH /opt/conda/bin:$PATH
+
+ENTRYPOINT [ "/usr/bin/tini", "--" ]
+
